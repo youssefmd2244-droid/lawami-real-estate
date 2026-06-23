@@ -591,7 +591,7 @@ export default function App() {
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10" />
               <img
-                src="/src/assets/images/luxury_penthouse_interior_1782158920662.jpg"
+                src="/images/luxury_penthouse_interior_1782158920662.jpg"
                 alt="Penthouse interior design"
                 className="w-full h-full object-cover transform hover:scale-[1.02] duration-[2s]"
                 referrerPolicy="no-referrer"
