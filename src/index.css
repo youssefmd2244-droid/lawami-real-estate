@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@500&family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Kufi+Arabic:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', 'Noto Kufi Arabic', system-ui, sans-serif;
+  --font-serif: 'Cinzel', 'Noto Kufi Arabic', serif;
+  --color-gold-50: #fbf8f3;
+  --color-gold-100: #f4edd9;
+  --color-gold-200: #e8d9b1;
+  --color-gold-300: #dbbf83;
+  --color-gold-400: #caa35b;
+  --color-gold-500: #c29545;
+  --color-gold-600: #ab7f37;
+  --color-gold-700: #8f652b;
+  --color-gold-800: #745025;
+  --color-gold-900: #5f3f20;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+::-webkit-scrollbar-thumb {
+  background: #c3973f;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #caa35b;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom styles for luxury theme */
+.gold-glow {
+  box-shadow: 0 0 30px rgba(194, 149, 69, 0.15);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 0 40px rgba(194, 149, 69, 0.3);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f4edd9 0%, #caa35b 50%, #8f652b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #caa35b 0%, #ab7f37 50%, #745025 100%);
+}
+
+.bg-luxury-dark {
+  background-color: #080808;
+}
+
+.bg-luxury-card {
+  background-color: #121212;
+}
+
+.border-gold-soft {
+  border-color: rgba(194, 149, 69, 0.2);
+}
+
+.border-gold-accent {
+  border-color: rgba(194, 149, 69, 0.5);
+}
+
+/* Base modifications */
+body {
+  background-color: #080808;
+  color: #f3f4f6;
+  font-family: var(--font-sans);
+}
+
+/* Pulse animation for CTA icons, whatsapp */
+@keyframes luxuryPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(194, 149, 69, 0.4);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 0 20px 8px rgba(194, 149, 69, 0);
+  }
+}
+
+.pulse-gold {
+  animation: luxuryPulse 3s infinite;
+}
+
+@keyframes whatsappPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 0 25px 10px rgba(34, 197, 94, 0);
+  }
+}
+
+.pulse-whatsapp {
+  animation: whatsappPulse 3s infinite;
+}
+
+/* --- RPG Floating Buttons & Glowing Orbit effects --- */
+@keyframes rpgFloat {
+  0%, 100% {
+    transform: translateY(0px);
+    filter: drop-shadow(0 4px 12px rgba(194, 149, 69, 0.45));
+  }
+  50% {
+    transform: translateY(-10px);
+    filter: drop-shadow(0 16px 28px rgba(194, 149, 69, 0.7));
+  }
+}
+
+@keyframes rpgFloatEmerald {
+  0%, 100% {
+    transform: translateY(0px);
+    filter: drop-shadow(0 4px 12px rgba(16, 185, 129, 0.45));
+  }
+  50% {
+    transform: translateY(-10px);
+    filter: drop-shadow(0 16px 28px rgba(16, 185, 129, 0.7));
+  }
+}
+
+.animate-rpg-float {
+  animation: rpgFloat 3.5s ease-in-out infinite;
+}
+
+.animate-rpg-float-delayed {
+  animation: rpgFloatEmerald 3.5s ease-in-out infinite;
+  animation-delay: 1.75s;
+}
+
+@keyframes rpgRotateClockwise {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes rpgRotateCounterClockwise {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.animate-rpg-ring-cw {
+  animation: rpgRotateClockwise 12s linear infinite;
+}
+
+.animate-rpg-ring-ccw {
+  animation: rpgRotateCounterClockwise 16s linear infinite;
+}
+
+@keyframes rpgGlowPulse {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(0.92);
+    box-shadow: 0 0 15px 4px rgba(194, 149, 69, 0.3);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.08);
+    box-shadow: 0 0 35px 12px rgba(194, 149, 69, 0.75);
+  }
+}
+
+@keyframes rpgGlowPulseEmerald {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(0.92);
+    box-shadow: 0 0 15px 4px rgba(16, 185, 129, 0.3);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.08);
+    box-shadow: 0 0 35px 12px rgba(16, 185, 129, 0.75);
+  }
+}
+
+.rpg-glow-gold {
+  animation: rpgGlowPulse 3s ease-in-out infinite;
+}
+
+.rpg-glow-emerald {
+  animation: rpgGlowPulseEmerald 3s ease-in-out infinite;
+}
+
+/* Slow spin for decorative items */
+.animate-spin-slow {
+  animation: rpgRotateClockwise 20s linear infinite;
+}
+
+/* Shine sweep animation on elements */
+@keyframes goldShineSweep {
+  0% {
+    left: -150%;
+  }
+  50% {
+    left: 150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+.shine-sweep-hover:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  animation: goldShineSweep 1.5s ease-in-out infinite;
+}
+
+/* Video-like organic fluid liquid-art video background motion using GPU translation to eliminate lag */
+@keyframes auraPulse1 {
+  0% {
+    transform: translate3d(0px, 0px, 0) scale(1);
+    opacity: 0.15;
+  }
+  33% {
+    transform: translate3d(70px, 40px, 0) scale(1.1);
+    opacity: 0.25;
+  }
+  66% {
+    transform: translate3d(-30px, 80px, 0) scale(0.95);
+    opacity: 0.18;
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0) scale(1);
+    opacity: 0.15;
+  }
+}
+
+@keyframes auraPulse2 {
+  0% {
+    transform: translate3d(0px, 0px, 0) scale(1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: translate3d(-80px, -50px, 0) scale(1.05);
+    opacity: 0.22;
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0) scale(1);
+    opacity: 0.1;
+  }
+}
+
+@keyframes auraPulse3 {
+  0% {
+    transform: translate3d(0px, 0px, 0) scale(1);
+    opacity: 0.08;
+  }
+  50% {
+    transform: translate3d(50px, -90px, 0) scale(1.15);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0) scale(1);
+    opacity: 0.08;
+  }
+}
+
+.animate-video-aura-1 {
+  animation: auraPulse1 16s infinite ease-in-out;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+.animate-video-aura-2 {
+  animation: auraPulse2 20s infinite ease-in-out;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+.animate-video-aura-3 {
+  animation: auraPulse3 14s infinite ease-in-out;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+
