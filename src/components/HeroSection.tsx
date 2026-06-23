@@ -224,7 +224,7 @@ export default function HeroSection({ lang, onBrowseClick, onSearchFocus }: Hero
         <div className="absolute inset-0 bg-gradient-to-t from-luxury-dark via-luxury-dark/60 to-transparent z-10" />
         <div className="absolute inset-0 bg-gradient-to-r from-luxury-dark/95 via-transparent to-luxury-dark/95 z-10" />
         <img
-          src="/src/assets/images/luxury_villa_riyadh_exterior_1782158906130.jpg"
+          src="/images/luxury_villa_riyadh_exterior_1782158906130.jpg"
           alt="Riyadh Luxury Villa"
           className="w-full h-full object-cover opacity-20 object-center transform scale-105"
           referrerPolicy="no-referrer"
@@ -352,7 +352,7 @@ export default function HeroSection({ lang, onBrowseClick, onSearchFocus }: Hero
                 
                 {/* Main Luxury Architectural Image */}
                 <img
-                  src="/src/assets/images/luxury_villa_riyadh_exterior_1782158906130.jpg"
+                  src="/images/luxury_villa_riyadh_exterior_1782158906130.jpg"
                   alt="Riyadh Luxury Villa"
                   className="w-full h-full object-cover transform scale-110 group-hover/card:scale-100 transition-transform duration-700 object-center"
                   referrerPolicy="no-referrer"
